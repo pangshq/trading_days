@@ -1,0 +1,6 @@
+src/__tests__
+src/index.ts
+jest.config.js
+tsconfig.json
+node_modules
+.claude

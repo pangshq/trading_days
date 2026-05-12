@@ -1,0 +1,39 @@
+{
+  "name": "@pangshq/trading_days",
+  "version": "1.0.0",
+  "description": "Check if a date is an A-Share trading day",
+  "license": "MIT",
+  "author": "pangshq",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src/index.js",
+    "src/index.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pangshq/trading_days"
+  },
+  "keywords": [
+    "a-share",
+    "trading-day",
+    "stock-market",
+    "china",
+    "holiday"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build && npm test",
+    "test": "jest"
+  },
+  "dependencies": {
+    "chinese-days": "^1.5.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.9",
+    "typescript": "^6.0.3"
+  }
+}
