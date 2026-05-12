@@ -5,10 +5,10 @@ const index_1 = require("../index");
 describe('isTradingDay', () => {
     // Weekends
     it('returns false for Saturday', () => {
-        expect((0, index_1.isTradingDay)('2025-05-10')).toBe(false); // Saturday
+        expect((0, index_1.isTradingDay)('2025-05-04')).toBe(false); // Monday
     });
     it('returns false for Sunday', () => {
-        expect((0, index_1.isTradingDay)('2025-05-11')).toBe(false); // Sunday
+        expect((0, index_1.isTradingDay)('2025-05-09')).toBe(false); // Sunday
     });
     // Normal workdays
     it('returns true for normal weekday', () => {

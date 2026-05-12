@@ -1,15 +1,22 @@
 {
   "name": "@pangshq/trading_days",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check if a date is an A-Share trading day",
   "license": "MIT",
   "author": "pangshq",
   "type": "commonjs",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
-    "src/index.js",
-    "src/index.d.ts"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -23,7 +30,7 @@
     "holiday"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && tsc -p tsconfig.esm.json && mv dist/esm/index.js dist/index.mjs && rm -rf dist/esm dist/__tests__",
     "prepublishOnly": "npm run build && npm test",
     "test": "jest"
   },
