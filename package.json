@@ -1,6 +1,6 @@
 {
   "name": "@pangshq/trading_days",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check if a date is an A-Share trading day",
   "license": "MIT",
   "author": "pangshq",

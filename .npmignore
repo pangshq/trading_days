@@ -1,6 +1,0 @@
-src
-jest.config.js
-tsconfig.json
-tsconfig.esm.json
-node_modules
-.claude
